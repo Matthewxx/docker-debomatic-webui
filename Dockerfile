@@ -10,3 +10,5 @@ RUN ln -s `pwd`/debomatic-modules/JSONLogger.py /usr/share/debomatic/modules/JSO
 RUN npm install
 RUN npm install -g coffee-script
 ADD user.config user.config
+RUN mkdir -p /srv/debomatic/amd64
+CMD coffee debomatic-webui -c user.config
