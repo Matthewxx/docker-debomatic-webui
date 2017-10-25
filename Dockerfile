@@ -11,4 +11,5 @@ RUN npm install
 RUN npm install -g coffee-script
 ADD user.config user.config
 RUN mkdir -p /srv/debomatic/amd64
-CMD coffee debomatic-webui -c user.config
+ADD debomatic-webui.sh debomatic-webui.sh
+CMD ./debomatic-webui.sh
