@@ -1,5 +1,5 @@
 FROM debian:stable
-RUN apt-get update && apt-get install -y curl gnupg git
+RUN apt-get update && apt-get install -y curl gnupg git unzip
 RUN curl -sL https://deb.nodesource.com/setup_6.x | bash -
 RUN apt-get install -y nodejs
 RUN git clone https://github.com/debomatic/debomatic-webui.git
