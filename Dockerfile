@@ -7,7 +7,7 @@ WORKDIR /debomatic-webui/debomatic-webui
 RUN mkdir -p /usr/share/debomatic/modules
 RUN ln -s `pwd`/debomatic-modules/JSONLogger.py /usr/share/debomatic/modules/JSONLoggerStart.py
 RUN ln -s `pwd`/debomatic-modules/JSONLogger.py /usr/share/debomatic/modules/JSONLoggerStop.py
-RUN npm install
+RUN npm install --unsafe-perm
 RUN npm install -g coffee-script
 ADD user.config user.config
 RUN mkdir -p /srv/debomatic/amd64
